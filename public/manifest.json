@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Time Converter",
+  "version": "1.0",
+  "description": "Convert times easily between CDT and IST.",
+  "author": "Codegorrilla",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Time Converter"
+  },
+  "icons": {
+    "16": "clock.svg",
+    "48": "clock.svg",
+    "128": "clock.svg"
+  }
+}
