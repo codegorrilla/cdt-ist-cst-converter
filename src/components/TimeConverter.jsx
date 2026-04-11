@@ -1,9 +1,14 @@
 import React, { useState } from "react";
+import { ActivateDst } from "./ActivateDst";
 
 export const TimeConverter = () => {
   const [cdtVal, setCdtVal] = useState("");
   const [istVal, setIstVal] = useState("");
   const [isCdtToIst, setIsCdtToIst] = useState(true);
+  const [offset, setOffset] = useState(11.5); // Default to standard time CST
+  const [isDstActive, setIsDstActive] = useState(false);
+
+  const centralLabel = isDstActive ? "CDT" : "CST";
 
   //handle switch
   const handleSwitch = () => {
@@ -16,13 +21,16 @@ export const TimeConverter = () => {
   const handleConvert = (e) => {
     e.preventDefault();
 
+    const offsetHours = Math.floor(offset); // 10 or 11
+    // offsetMinutes is always 30
+
     if (isCdtToIst) {
       if (!cdtVal) return;
 
       const [hours, minutes] = cdtVal.split(":").map(Number);
 
       let newMinutes = minutes + 30;
-      let newHours = hours + 10;
+      let newHours = hours + offsetHours;
 
       // Handle overflow for minutes
       if (newMinutes >= 60) {
@@ -43,7 +51,7 @@ export const TimeConverter = () => {
       const [hours, minutes] = istVal.split(":").map(Number);
 
       let newMinutes = minutes - 30;
-      let newHours = hours - 10;
+      let newHours = hours - offsetHours;
 
       // Handle underflow for minutes
       if (newMinutes < 0) {
@@ -51,7 +59,7 @@ export const TimeConverter = () => {
         newHours -= 1;
       }
 
-      // Handle negative hours (in JS, modulo operator preserves negative numbers, so we explicitly handle it)
+      // Handle negative hours
       newHours = (newHours + 24) % 24;
 
       const formattedHours = String(newHours).padStart(2, "0");
@@ -68,7 +76,7 @@ export const TimeConverter = () => {
           {isCdtToIst ? (
             <div className="flex flex-col gap-2 w-full">
               <label htmlFor="cdt" className="text-white font-bold ps-2">
-                CDT
+                {centralLabel}
               </label>
               <input
                 type="time"
@@ -134,7 +142,7 @@ export const TimeConverter = () => {
           ) : (
             <div className="flex flex-col gap-2 w-full">
               <label htmlFor="cdt" className="text-white font-bold ps-2">
-                CDT
+                {centralLabel}
               </label>
               <input
                 type="time"
@@ -146,6 +154,11 @@ export const TimeConverter = () => {
             </div>
           )}
         </div>
+
+        <ActivateDst
+          onOffsetChange={setOffset}
+          onActiveChange={setIsDstActive}
+        />
 
         <button
           type="submit"
