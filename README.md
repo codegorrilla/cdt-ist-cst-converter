@@ -1,16 +1,52 @@
-# React + Vite
+# CST to IST Time Converter 🕒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, visually-appealing Chrome Extension that provides instant, bidirectional time conversion between **US Central Time (CST/CDT)** and **Indian Standard Time (IST)**. 
 
-Currently, two official plugins are available:
+Built with React and Vite, this modern extension is perfect for remote teams and individuals managing schedules across these two major time zones.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
+*   **Real-Time Conversion:** Instantly convert times without relying on bulky websites.
+*   **Bi-directional:** Swap between CST -> IST and IST -> CST easily.
+*   **Modern UI/UX:** Clean, intuitive, and responsive interface designed for quick access.
+*   **Privacy First:** All calculations are performed locally in your browser. Absolutely zero data collection, tracking, or telemetry.
 
-## React Compiler
+## 🚀 Installation (from Chrome Web Store)
+*(Coming Soon)*
+1. Go to the Chrome Web Store extension page.
+2. Click **Add to Chrome**.
+3. Pin the extension for quick access!
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Local Development & Manual Installation
 
-## Expanding the ESLint configuration
+To run or build this extension locally, follow these steps:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+*   [Node.js](https://nodejs.org/) (v16.0 or higher)
+*   npm or yarn
+
+### 1. Build the Extension
+```bash
+# Clone the repository
+git clone https://github.com/your-username/cst-ist-cst-converter.git
+cd cst-ist-cst-converter
+
+# Install dependencies
+npm install
+
+# Build for production
+npm run build
+```
+*(The build is packaged into the `dist/` directory, which serves as your extension folder).*
+
+### 2. Load into Chrome
+1. Open Google Chrome and navigate to `chrome://extensions/`.
+2. Enable **Developer mode** in the top right corner.
+3. Click the **Load unpacked** button.
+4. Select the `dist/` folder generated in the previous step.
+5. The extension is now loaded and ready to use!
+
+## 🛡️ Privacy Policy
+This extension does not collect, store, or transmit any user data. See [PRIVACY_POLICY.md](./PRIVACY_POLICY.md) for more details.
+
+## 🤝 Contact & Support
+For any questions, suggestions, or feedback, please contact us at [code.gorrilla@gmail.com](mailto:code.gorrilla@gmail.com).
