@@ -6,15 +6,15 @@ Built with React and Vite, this modern extension is perfect for remote teams and
 
 ## ✨ Features
 *   **Real-Time Conversion:** Instantly convert times without relying on bulky websites.
-*   **Bi-directional:** Swap between CST -> IST and IST -> CST easily.
+*   **Bi-directional:** Swap between CST/CDT -> IST and IST -> CST/CDT easily.
 *   **Modern UI/UX:** Clean, intuitive, and responsive interface designed for quick access.
 *   **Privacy First:** All calculations are performed locally in your browser. Absolutely zero data collection, tracking, or telemetry.
 
 ## 🚀 Installation (from Chrome Web Store)
-*(Coming Soon)*
 1. Go to the Chrome Web Store extension page.
 2. Click **Add to Chrome**.
 3. Pin the extension for quick access!
+4. [Chrome webstore link](https://chromewebstore.google.com/detail/time-converter/filmemeeiplgbfaoblaebdbaimmhagej)
 
 ## 🛠️ Local Development & Manual Installation
 
@@ -49,4 +49,4 @@ npm run build
 This extension does not collect, store, or transmit any user data. See [PRIVACY_POLICY.md](./PRIVACY_POLICY.md) for more details.
 
 ## 🤝 Contact & Support
-For any questions, suggestions, or feedback, please contact us at [code.gorrilla@gmail.com](mailto:code.gorrilla@gmail.com).
+For any questions, suggestions, or feedback, please contact me at [code.gorrilla@gmail.com](mailto:code.gorrilla@gmail.com).
